@@ -1,6 +1,7 @@
 {
 	"name": "pl_silver",
 	"properties": {
+		"description": "DELETE FROM silver.billing;\nDELETE FROM silver.diagnoses;\nDELETE FROM silver.admissions;\nDELETE FROM silver.patients;",
 		"activities": [
 			{
 				"name": "Script1",
@@ -14,6 +15,10 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "sql_hospital_dw",
+					"type": "LinkedServiceReference"
+				},
 				"typeProperties": {
 					"scripts": [
 						{
